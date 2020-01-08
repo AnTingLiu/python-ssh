@@ -1,2 +1,2 @@
-netmiko
-pyyaml
+netmiko==2.4.2
+pyyaml==3.12
