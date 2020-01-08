@@ -1,13 +1,8 @@
 all:
-  hosts:
-    mail.example.com:
-  children:
-    webservers:
-      hosts:
-        foo.example.com:
-        bar.example.com:
-    dbservers:
-      hosts:
-        one.example.com:
-        two.example.com:
-        three.example.com:
+  vars :
+    username: ansible
+    password: ansible
+  HQ:
+    hosts:
+      R1: 192.168.10.201
+      R2: 192.168.10.202
