@@ -1,8 +1,17 @@
 all:
-  vars :
+  vars:
     username: ansible
     password: ansible
-  HQ:
-    hosts:
-      R1: 192.168.10.201
-      R2: 192.168.10.202
+  groups:
+    HQ:
+      hosts:
+        - hostname: R1
+          host: 192.168.10.201
+          device_type_netmiko: cisco_ios
+          device_type: 3725
+          device_role: edge
+        - hostname: R2
+          host: 192.168.10.202
+          device_type_netmiko: cisco_ios
+          device_type: 3725
+          device_role: edge
